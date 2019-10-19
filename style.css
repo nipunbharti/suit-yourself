@@ -1,0 +1,10 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(5, 5, 5);
+}
+
+.backgroundImage {
+	width: 100%;
+	height: 100%;
+}
