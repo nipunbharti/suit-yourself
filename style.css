@@ -2,6 +2,9 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: rgb(5, 5, 5);
+	background-image: url("public/HomeArt.svg");
+	background-repeat:no-repeat;
+	background-size:cover;
 }
 
 .backgroundImage {
