@@ -6,7 +6,7 @@
 	<!-- <script src="External/bootstrap.min.js"></script> -->
 	<link rel="stylesheet" href="External/bootstrap.min.css">
 </head>
-<body>
+<body onload="loadCartValues()">
 	<nav class="navbar navbar-expand-md navbar-light fixed-top heightNavbar header">
 		<button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav">
 			<span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@
 							<a class="nav-link text-dark font-weight-bold px-3 text1" href="#Log In">LOGIN</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-dark font-weight-bold px-3 text1" href="#Cart">CART</a>
+							<a class="nav-link text-dark font-weight-bold px-3 text1" href="#Cart" onclick="on()">CART<div class="noOfItems"></div></a>
 						</li>
 					</div>
 				</div>
@@ -75,7 +75,7 @@
 				</div>
 			</div>
 			<div class="addToCart division2">
-				<img src="public/addToCart.svg" class="addToCartBtn" alt="addToCart">
+				<img src="public/addToCart.svg" onclick="addToCart()" class="addToCartBtn" alt="addToCart">
 			</div>
 			<div class="suitInfo division1">
 				<div class="suitInfoContainer">
@@ -94,6 +94,18 @@
 					Lorem ipsum Lorem ipsum asd
 				</div>
 			</div>
+		</div>
+	</div>
+	<div id="overlay">
+		<div id="overlayHeader">
+			<img src="public/CartIcon.png" class="cartIcon" />
+			<div onclick="off()" style="font-size: 20px;">close</div>
+		</div>
+		<div class="cartItems">
+			
+		</div>
+		<div class="btnContainer">
+			<button class="checkoutBtn">Checkout</button>
 		</div>
 	</div>
 	<script>
@@ -122,6 +134,85 @@
 		  }
 		  slides[slideIndex-1].style.display = "block";  
 		  dots[slideIndex-1].className += " active";
+		}
+
+		function on() {
+			loadCartValues();
+		  document.getElementById("overlay").style.display = "flex";
+		}
+
+		function off() {
+			document.getElementById("overlay").style.display = "none";
+		}
+
+		function addToCart() {
+			let arr = localStorage.getItem('cartValues');
+			var mainDiv2 = document.getElementsByClassName('noOfItems')[0];
+			console.log(arr);
+			if(arr == null) {
+				arr = 1;
+				localStorage.setItem("cartValues", arr);
+			}
+			else {
+				arr++;
+				localStorage.setItem("cartValues", arr);
+			}
+			mainDiv2.innerHTML = arr;
+		}
+
+		function loadCartValues() {
+			let arr = localStorage.getItem('cartValues');
+			var mainDiv2 = document.getElementsByClassName('noOfItems')[0];
+			if(arr == null) {
+				mainDiv2.innerHTML = 0;
+			}
+			else {
+				var mainDiv = document.getElementsByClassName('cartItems')[0];
+				console.log(innerDiv);
+				mainDiv.innerHTML = "";
+				mainDiv2.innerHTML = arr;
+				for(var i = 0; i < arr; i++) {
+					var innerDiv = document.createElement('div');
+					innerDiv.className = "item";
+					innerDiv.innerHTML = `<div class="whiteBackground">
+						</div>
+						<div class="itemInfo whiteBorder">
+							<div class="heading whiteBorder">
+								<div>
+									Premium Soft Suit
+								</div>				
+								<div class="deleteSuit" onclick="deleteItem()">
+									X
+								</div>				
+							</div>
+							<div class="color whiteBorder">
+								<div class="ball"></div>
+							</div>
+							<div class="qtyPrice whiteBorder">
+								<div class="qty">QTY: 1</div>
+								<div class="price">INR 4500</div>
+							</div>
+						</div>`;
+					mainDiv.appendChild(innerDiv);
+				}
+				console.log(mainDiv);
+			}
+		}
+
+		function deleteItem() {
+			let arr = localStorage.getItem('cartValues');
+			if(arr == null) {
+
+			}
+			else {
+				arr--;
+				localStorage.setItem("cartValues", arr);
+			}
+			loadCartValues();
+		}
+
+		function returnNoOfItems() {
+
 		}
 	</script>
 </body>
