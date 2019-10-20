@@ -23,7 +23,7 @@
 							<a class="nav-link text-dark font-weight-bold px-3 text1" href="about.html" target="_self">ABOUT</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-dark font-weight-bold px-3 text1" href="#Stores">STORES</a>
+							<a class="nav-link text-dark font-weight-bold px-3 text1" href="suits.html">STORES</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link text-dark font-weight-bold px-3 text1" href="categories.html">CATEGORIES</a>
@@ -49,32 +49,34 @@
 			</ul>
 		</div>
 	</nav>
-	<div class="w3-animate-right categories1" id="toggle">
-		<img src="public/Categories.svg" alt="Categories" class="categories2 marginRight">
-	</div>
+	<a href="categories.html">
+		<div class="w3-animate-right categories1" id="toggle">
+			<img src="public/Categories.svg" alt="Categories" class="categories2 marginRight">
+		</div>
+	</a>
 
 	<script>
 		flag = true
-		$(document).ready(function() {
-			$(".categories2").click(function() {
-				console.log($(this).css("margin-right"))
-				console.log($('.categories2').hasClass("marginRight"))
-				if($('.categories2').hasClass("marginRight")) 
-					$(this).animate({ 'margin-right': '0%' });
-					// flag = false;
-				else
-					// console.log("H")
-					$(this).animate({ "margin-right": "-182%" });
-					// flag = true;
+		// $(document).ready(function() {
+		// 	$(".categories2").click(function() {
+		// 		console.log($(this).css("margin-right"))
+		// 		console.log($('.categories2').hasClass("marginRight"))
+		// 		if($('.categories2').hasClass("marginRight")) 
+		// 			$(this).animate({ 'margin-right': '0%' });
+		// 			// flag = false;
+		// 		else
+		// 			// console.log("H")
+		// 			$(this).animate({ "margin-right": "-182%" });
+		// 			// flag = true;
 
-				if($('.categories2').hasClass("marginRight")) {
-					$('.categories2').removeClass("marginRight");
-				}
-				else {
-					$('.categories2').addClass("marginRight");	
-				}
-			})
-		})
+		// 		if($('.categories2').hasClass("marginRight")) {
+		// 			$('.categories2').removeClass("marginRight");
+		// 		}
+		// 		else {
+		// 			$('.categories2').addClass("marginRight");	
+		// 		}
+		// 	})
+		// })
 
 	</script>
 	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
