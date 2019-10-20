@@ -7,19 +7,99 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	background-color: rgb(5, 5, 5);
+	background-color: #FAF7EF;
 }
 
-#bg {
+#titleLogo {
   position: fixed; 
   top: 5px; 
-  left: 0; 
+  left: 43%; 
 	
   /* Preserve aspet ratio */
-  width: 100%;
-  height: 100%;
-  z-index: 2;
- pointer-events: none;
+  margin:auto;
+  width: 15%;
+  height: 15%;
+	z-index: 2;
+}
+
+#item1 {
+	position: fixed; 
+	margin-top:20%;
+	margin-left:20%;
+	height: 120px;
+	width: 120px;
+	z-index:4;
+}
+
+#item2 {
+	position: fixed; 
+	margin-top:20%;
+	margin-left:30%;
+	height: 150px;
+	width: 100px;
+	z-index:4;
+}
+
+#item3 {
+	position: fixed; 
+	margin-top:33%;
+	margin-left:19%;
+	height: 150px;
+	width: 150px;
+	z-index:4;
+}
+
+#item4 {
+	position: fixed; 
+	margin-top:37%;
+	margin-left:30%;
+	height: 100px;
+	width: 100px;
+	z-index:4;
+}
+
+#item5 {
+	position: fixed; 
+	margin-top:18%;
+	margin-left:48%;
+	height: 150px;
+	width: 150px;
+	z-index:4;
+}
+
+#item6 {
+	position: fixed; 
+	margin-top:25%;
+	margin-left:40%;
+	height: 120px;
+	width: 120px;
+	z-index:4;
+}
+
+#item7 {
+	position: fixed; 
+	margin-top:33%;
+	margin-left:50%;
+	height: 120px;
+	width: 120px;
+	z-index:4;
+}
+
+#item8 {
+	position: fixed; 
+	margin-top:40%;
+	margin-left:40%;
+	height: 100px;
+	width: 100px;
+	z-index:4;
+}
+
+#bg1{
+	position: fixed;
+	left:150px;
+	top:50px;
+	width:100%;
+	height:100%;
 }
 
 @font-face {
@@ -33,7 +113,6 @@ body {
 }
 
 .heightNavbar:{
-	border: 2px solid green;
 }
 
 .header{
@@ -97,6 +176,10 @@ rect.pullTabBtn {
   fill:#fff;
   fill-opacity:0;
   stroke-opacity:0;
+}
+
+.clickableSvg {
+	border: 1px solid black;
 }
 
 /*.click {
