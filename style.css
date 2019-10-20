@@ -1,13 +1,56 @@
+html {
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	margin: 0;
 	padding: 0;
-	background-color: rgb(5, 5, 5);
+	/*background-color: rgb(5, 5, 5);*/
 	background-image: url("public/HomeArt.svg");
 	background-repeat:no-repeat;
-	background-size:cover;
+	background-size: cover;
+	background-position: center bottom;
 }
+
+@font-face {
+  font-family: 'riesling';
+  src: url('/public/riesling.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
 
 .backgroundImage {
 	width: 100%;
 	height: 100%;
+}
+
+.heightNavbar:{
+	border: 2px solid green;
+}
+
+.header{
+	width:100%;
+	height:80px;
+	background-color: #FAF7EF;
+	align-items: center;
+	font-family: 'riesling';
+}
+
+.header1{
+	display: flex;
+	flex-direction:row;
+	width:100%;
+	justify-content: space-between;
+}
+
+.header2{
+	display: flex;
+	flex-direction: row;
+	width:40%;
+	justify-content:space-around;
+
+}
+
+.text1{
+	color: black;
 }
