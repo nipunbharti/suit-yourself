@@ -24,7 +24,7 @@ body {
 
 @font-face {
   font-family: 'riesling';
-  src: url('/public/riesling.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  src: url("public/pier.otf") format("opentype");
 }  
 
 .backgroundImage {
@@ -42,6 +42,7 @@ body {
 	background-color: #FAF7EF;
 	align-items: center;
 	font-family: 'riesling';
+	letter-spacing: 3px;
 	backface-visibility: hidden;
 	z-index: 1;
 }
