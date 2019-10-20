@@ -1,0 +1,99 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #FAF7EF;
+}
+
+@font-face {
+  font-family: 'pier';
+  src: url("public/pier.otf") format("opentype");
+}  
+
+@font-face {
+  font-family: 'riesling';
+  src: url("public/riesling.ttf") format('truetype');
+}  
+
+.header{
+	width:100%;
+	height:80px;
+	background-color: #FAF7EF;
+	align-items: center;
+	font-family: 'pier';
+	letter-spacing: 3px;
+	backface-visibility: hidden;
+	z-index: 1;
+}
+
+.header1{
+	display: flex;
+	flex-direction:row;
+	width:100%;
+	justify-content: space-between;
+}
+
+.header2{
+	display: flex;
+	flex-direction: row;
+	width:40%;
+	justify-content:space-around;
+}
+
+.text1{
+	color: black;
+}
+
+.mainSuits {
+	margin-top: 80px;
+}
+
+.suitsHeader {
+	color:  #C01A27;
+	padding: 10px;
+	padding-left: 30px;
+	font-size: 60px;
+}
+
+.suitsCardsContainer {
+	/* border: 1px solid black; */
+	display: flex;
+	flex-wrap: wrap;
+	/* padding: 20px; */
+	/* padding-left: 50px; */
+}
+
+.suitCard {
+	/* border: 1px solid black; */
+	margin-left: 30px;
+	height: 460px;
+}
+
+.whiteBg {
+	width: 320px;
+	height: 380px;
+	border: 1px solid black;
+}
+
+.cardDetail {
+	display: flex;
+	align-items: center;
+	font-family: 'riesling';
+	font-size: 35px;
+	height: 40px;
+	justify-content: space-between;
+}
+
+.priceSuit {
+	font-family: 'pier';
+	font-size: 18px;
+	color: #C01A27;
+	padding: 4px;
+}
+
+.differentColours {
+	color: #909090;
+	font-size: 16px;
+	font-family: 'pier';
+	display: flex;
+	align-items: center;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Suit detail</title>
+	<link rel="stylesheet" type="text/css" href="suitDetails.css">
+	<!-- <script src="External/bootstrap.min.js"></script> -->
+	<link rel="stylesheet" href="External/bootstrap.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-light fixed-top heightNavbar header">
+		<button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-between" id="nav">
+			<ul class="navbar-nav header">
+				<div class="header1">
+					<div class="header2">
+						<li class="nav-item" >
+							<a class="nav-link text-dark font-weight-bold px-3 text1" target="_self">ABOUT</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark font-weight-bold px-3 text1" href="#Stores">STORES</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark font-weight-bold px-3 text1" href="#Categories">CATEGORIES</a>
+						</li>
+					</div>
+					<div class="header2">
+						<li class="nav-item dropdown" data-toggle="dropdown">
+							<a class="nav-link text-dark font-weight-bold px-3 dropdown-toggle text1" href="#">MORE</a>
+							<div class="dropdown-menu">
+								<!-- <a class="dropdown-item" href="#">LUN</a>
+								<a class="dropdown-item" href="#">TATTE</a>
+								<a class="dropdown-item" href="#">FUDDI</a> -->
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark font-weight-bold px-3 text1" href="#Log In">LOGIN</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark font-weight-bold px-3 text1" href="#Cart">CART</a>
+						</li>
+					</div>
+				</div>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="suitDetailsCont">
+		<div class="detailContainer">
+			<div class="suitImage division1">
+				<div class="slideshow-container-new">
+					<div class="mySlides">
+					  <div class="numbertext">1 / 3</div>
+					  <img src="public/demo-suit.jpeg" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+					  <div class="numbertext">2 / 3</div>
+					  <img src="public/demo-suit1.jpeg" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+					  <div class="numbertext">3 / 3</div>
+					  <img src="public/demo-suit.jpeg" style="width:100%">
+					</div>
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+				<br>
+				<div style="text-align:center">
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				</div>
+			</div>
+			<div class="addToCart division2">
+				<img src="public/addToCart.svg" class="addToCartBtn" alt="addToCart">
+			</div>
+			<div class="suitInfo division1">
+				<div class="suitInfoContainer">
+					Premium Soft Suit
+				</div>
+				<div class="suitInfoContainer priceTag">
+					INR 4500
+				</div>
+				<div class="suitInfoContainer description">
+					DESCRIPTION
+				</div>
+				<div class="suitInfoContainer description">
+					Lorem ipsum Lorem ipsum 
+				</div>
+				<div class="suitInfoContainer description">
+					Lorem ipsum Lorem ipsum asd
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+	</script>
+</body>
+</html>
